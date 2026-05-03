@@ -11,7 +11,10 @@ public class Principal {
         meuCarro.proprietario.setNome("João");
         meuCarro.proprietario.setCpf("999.999.000.99");
         meuCarro.proprietario.setAnoNascimento(2000);
+        meuCarro.setAnoFabricacao(2025);
+        meuCarro.setAnosUsado(2027);
+        meuCarro.setPrecoCompra(80000);
 
-        System.out.println(meuCarro);
+        meuCarro.imprimirResumoDepreciacao();
     }
 }
