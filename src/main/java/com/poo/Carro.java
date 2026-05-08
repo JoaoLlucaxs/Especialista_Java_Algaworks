@@ -92,6 +92,30 @@ public class Carro {
         this.anoFabricacao = anoFabricacao;
     }
 
+    public int getAnosUsado() {
+        return anosUsado;
+    }
+
+    public void setAnosUsado(int anosUsado) {
+        this.anosUsado = anosUsado;
+    }
+
+    public double getPrecoCompra() {
+        return precoCompra;
+    }
+
+    public void setPrecoCompra(double precoCompra) {
+        this.precoCompra = precoCompra;
+    }
+
+    public Pessoa getProprietario() {
+        return proprietario;
+    }
+
+    public void setProprietario(Pessoa proprietario) {
+        this.proprietario = proprietario;
+    }
+
     @Override
     public String toString() {
         return "Carro{" +
