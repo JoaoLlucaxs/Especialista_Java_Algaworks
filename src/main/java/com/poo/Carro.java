@@ -92,22 +92,6 @@ public class Carro {
         this.anoFabricacao = anoFabricacao;
     }
 
-    public double getPrecoCompra() {
-        return precoCompra;
-    }
-
-    public void setPrecoCompra(double precoCompra) {
-        this.precoCompra = precoCompra;
-    }
-
-    public int getAnosUsado() {
-        return anosUsado;
-    }
-
-    public void setAnosUsado(int anosUsado) {
-        this.anosUsado = anosUsado;
-    }
-
     @Override
     public String toString() {
         return "Carro{" +
@@ -115,8 +99,6 @@ public class Carro {
                 ", modelo='" + modelo + '\'' +
                 ", cor='" + cor + '\'' +
                 ", anoFabricacao=" + anoFabricacao +
-                ", anosUsado=" + anosUsado +
-                ", precoCompra=" + precoCompra +
                 ", proprietario=" + proprietario +
                 '}';
     }
