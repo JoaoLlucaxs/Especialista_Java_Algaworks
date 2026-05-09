@@ -6,18 +6,26 @@ public class Paciente {
     public Paciente() {
     }
 
-    void calculoIMC() {
+    GerarRelatorioIMC calcularIndiceMassaCorporal() {
         double calculo = getPeso() / (getAltura() * getAltura());
 
-        if (calculo < 18.5) {
-            System.out.println("Indíce de massa corporal muito baixa!");
-        }else if (calculo > 18.5 && calculo < 24.9){
-            System.out.println("Seu peso está normal = " + calculo);
-        }else if (calculo >= 25 && calculo <= 30){
-            System.out.println("Você está com sobrepreso!");
+        GerarRelatorioIMC relatorio = new GerarRelatorioIMC();
+        relatorio.setResultado(calculo);
+
+        if(relatorio.getResultado() < 18.5){
+            relatorio.setStatus("Abaixo do peso");
+            relatorio.setSugestao("Procure um nutricionista");
+        }else if (relatorio.getResultado()> 18.5 && relatorio.getResultado() < 24.9){
+            relatorio.setStatus("Peso normal");
+            relatorio.setSugestao("Mantenha o peso , saudável");
+        }else if(relatorio.getResultado() >= 25 && relatorio.getResultado() <= 30){
+            relatorio.setStatus("Acima do peso!");
+            relatorio.setSugestao("Acima do peso, procure urgente um nutricionista");
         }else{
-            System.out.println("Grau de obesidade alta");
+            relatorio.setStatus("Grau obesidade");
+            relatorio.setSugestao("Procure um nutricionista o mais rápido possível");
         }
+        return relatorio;
     }
 
 

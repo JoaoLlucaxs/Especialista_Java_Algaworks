@@ -5,9 +5,10 @@ public class Principal {
         Paciente paciente = new Paciente();
 
         paciente.setNome_Paciente("Juliano");
-        paciente.setPeso(95);
-        paciente.setAltura(1.65);
+        paciente.setPeso(70);
+        paciente.setAltura(1.80);
 
-        paciente.calculoIMC();
+        GerarRelatorioIMC gerarRelatorioIMC = paciente.calcularIndiceMassaCorporal();
+        System.out.println(gerarRelatorioIMC);
     }
 }
