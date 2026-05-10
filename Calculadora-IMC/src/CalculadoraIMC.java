@@ -1,13 +1,10 @@
-public class Paciente {
-    String nome_Paciente;
-    double altura;
-    double peso;
+public class CalculadoraIMC {
 
-    public Paciente() {
+    public CalculadoraIMC() {
     }
 
-    GerarRelatorioIMC calcularIndiceMassaCorporal() {
-        double calculo = getPeso() / (getAltura() * getAltura());
+    GerarRelatorioIMC calcularIndiceMassaCorporal(Pessoa paciente) {
+        double calculo = paciente.getPeso() / (paciente.getAltura() * paciente.getAltura());
 
         GerarRelatorioIMC relatorio = new GerarRelatorioIMC();
         relatorio.setResultado(calculo);
@@ -26,37 +23,5 @@ public class Paciente {
             relatorio.setSugestao("Procure um nutricionista o mais rápido possível");
         }
         return relatorio;
-    }
-
-
-    public String getNome_Paciente() {
-        return nome_Paciente;
-    }
-
-    public void setNome_Paciente(String nome_Paciente) {
-        this.nome_Paciente = nome_Paciente;
-    }
-
-    public double getAltura() {
-        return altura;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
-
-    public double getPeso() {
-        return peso;
-    }
-
-    public void setPeso(double peso) {
-        this.peso = peso;
-    }
-
-    @Override
-    public String toString() {
-        return "Nome do Paciente = " + nome_Paciente + '\'' +
-                ", altura = " + altura +
-                ", peso = " + peso;
     }
 }

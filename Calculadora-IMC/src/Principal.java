@@ -2,13 +2,13 @@ public class Principal {
     public static void main(String[] args) {
 
 
-        Paciente paciente = new Paciente();
+        CalculadoraIMC calculadoraIMC = new CalculadoraIMC();
 
-        paciente.setNome_Paciente("Juliano");
+        Pessoa paciente =new Pessoa();
         paciente.setPeso(70);
-        paciente.setAltura(1.80);
+        paciente.setAltura(1.70);
 
-        GerarRelatorioIMC gerarRelatorioIMC = paciente.calcularIndiceMassaCorporal();
+        GerarRelatorioIMC gerarRelatorioIMC = calculadoraIMC.calcularIndiceMassaCorporal(paciente);
         System.out.println(gerarRelatorioIMC);
     }
 }
